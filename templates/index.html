@@ -30,6 +30,18 @@
     </div>
     {% endfor %}
     <!-- ハンバーガーメニューの開閉処理-->
-    <script type="text/javascript" src="static/menu.js"></script>
+    <script type="text/javascript">
+    console.log('yahho')
+    function $(id) {return document.querySelector(id)}
+    $("#menu-switch")._b = false
+    $("#menu-switch").onclick = () =>{
+      $("#menu-switch")._b = !$("#menu-switch")._b
+      if ($("#menu-switch")._b) {
+        $("#menu").style.display = "block"
+      }else{
+        $("#menu").style.display = "none"
+      }
+    }
+    </script>
   </div></body>
 </html>
